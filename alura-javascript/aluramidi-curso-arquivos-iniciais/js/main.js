@@ -1,13 +1,12 @@
 function tocaSom (seletorAudio) {
     const elemento = document.querySelector(seletorAudio);
-    if (elemento === null ){
-        console.log("esse elemento não está registrado!")
+
+    if (elemento != null && elemento.localName === 'audio'){
+        elemento.play();           
     }
-    if (elemento != null){
-        if(elemento.localName === 'audio'){
-        elemento.play();
-}
-    }
+    else (elemento === null)
+    console.log("esse elemento ou seletor não está registrado!")
+     
 }
 const listaDeTeclas = document.querySelectorAll('.tecla');
 
